@@ -5,7 +5,7 @@ def jsonParse(def json){
 }
 
 pipeline { 
-  agent { label 'master'}
+  agent { label 'built-in'}
   environment {
     appName ="variable"
   }
@@ -27,7 +27,7 @@ pipeline {
         sh "echo 'fase Success'"
     }
     failure {
-        sh "echo 'fase Success'"
+        sh "echo 'fase failure'"
     }
   }
 }
